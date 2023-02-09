@@ -20,8 +20,7 @@ hostname -I | awk {'print $1'}
 
 Configure Kind to use your IP address (edit kind-cilium.yaml). This is needed for our kube-proxy less Cilium installation. Cilium can replace kube-proxy, so we fully use all the functionality.
 
->[!WARNING]
->This will bind the API server to your local IP, and is a security risk.
+>:warning: This will bind the API server to your local IP, and is a security risk.
 
 ```bash
 $ kind create cluster --config=kind-cilium.yaml
