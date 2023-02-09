@@ -1,0 +1,34 @@
+# https://github.com/cilium/cilium/blob/v1.12.6/install/kubernetes/cilium/values.yaml
+
+# Update to your IP/Port apiserver
+k8sServiceHost: ADD_YOUR_IP
+k8sServicePort: 6443
+
+# -- Enables experimental support for the detection of new and removed datapath
+# devices. When devices change the eBPF datapath is reloaded and services updated.
+# If "devices" is set then only those devices, or devices matching a wildcard will
+# be considered.
+enableRuntimeDeviceDetection: true
+
+hubble:
+  relay:
+    enabled: true
+  ui:
+    enabled: true
+
+hostFirewall:
+  enabled: true
+  relay:
+    enabled: true
+  ui:
+    enabled: true
+
+ipam:
+  # -- Configure IP Address Management mode.
+  # ref: https://docs.cilium.io/en/stable/concepts/networking/ipam/
+  mode: kubernetes
+
+# -- Configure the kube-proxy replacement in Cilium BPF datapath
+# Valid options are "disabled", "partial", "strict".
+# ref: https://docs.cilium.io/en/stable/gettingstarted/kubeproxy-free/
+kubeProxyReplacement: "strict"
