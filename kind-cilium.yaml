@@ -12,5 +12,5 @@ networking:
   disableDefaultCNI: true
   kubeProxyMode: "none"
   # WARNING: It is _strongly_ recommended that you keep this the default (127.0.0.1) for security reasons.
-  apiServerAddress: "192.168.86.42"
+  apiServerAddress: "YOUR_IP_ADDRESS_HERE"
   apiServerPort: 6443
