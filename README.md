@@ -63,6 +63,7 @@ Testing Hubble installation
 Hubble is enabled in the helm values, you can test with:
 
 ```bash
+$ cilium hubble port-forward &
 $ hubble status
 Healthcheck (via localhost:4245): Ok
 Current/Max Flows: 14,896/16,380 (90.94%)
