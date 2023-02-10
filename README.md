@@ -15,7 +15,7 @@ You want to play / test with Cilium functionality, but don't known where to star
 Retrieve your local IP address (assuming only 1 NIC with IP configured):
 
 ```bash
-hostname -I | awk {'print $1'}
+$ hostname -I | awk {'print $1'}
 ```
 
 Configure Kind to use your IP address (edit kind-cilium.yaml). This is needed for our kube-proxy less Cilium installation. Cilium can replace kube-proxy, so we fully use all the functionality.
